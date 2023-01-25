@@ -15,8 +15,5 @@ export default {
     VueComponent,
   },
 
-  data: () => ({
-    //
-  }),
 }
 </script>
