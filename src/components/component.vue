@@ -8,21 +8,21 @@
   <div class="container">
     <div class="row">
       <div class="column"
-           v-bind:style="{'flex': sm}"
+           :style="{'flex': sm}"
            style="background-color:#e74343;"
       >
         <h2>1</h2>
       </div>
 
       <div class="column"
-           v-bind:style="{'flex': md}"
+           :style="{'flex': md}"
            style="background-color:#6868e7;"
       >
         <h2>2</h2>
       </div>
 
       <div class="column"
-           v-bind:style="{'flex': lg}"
+           :style="{'flex': lg}"
            style="background-color:#87c787;">
         <h2>3</h2>
       </div>
@@ -45,9 +45,6 @@ export default {
     md: '50%',
     lg: '100%'
   }),
-  // props: {
-  //   size: String
-  // }
 }
 </script>
 <style>
