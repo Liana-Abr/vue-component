@@ -1,34 +1,38 @@
 <template>
-  <h1>Component</h1>
+  <h1>FlexLayout Component</h1>
 <!--  container=>row=>col-->
-<!-- "sm" => flex="10%" -->
-  <!-- "md" => flex="50%" -->
-  <!--  "lg" => flex="100%" -->
+<!-- "sm" => flex="10%"-->
+<!--   "md" => flex="70%"-->
+<!--    "lg" => flex="100%"-->
 
   <div class="container">
     <div class="row">
-      <div class="column"
-           :style="{'flex': sm}"
+<!--      <div class="column"-->
+<!--           :style="{'flex': size + '%'}"-->
+<!--           style="background-color:#e74343;"-->
+<!--      >-->
+<!--        <h2>1</h2>-->
+<!--      </div>-->
+      <div :class='size'
            style="background-color:#e74343;"
       >
         <h2>1</h2>
       </div>
 
-      <div class="column"
-           :style="{'flex': md}"
+      <div :class='size'
            style="background-color:#6868e7;"
       >
         <h2>2</h2>
       </div>
 
-      <div class="column"
-           :style="{'flex': lg}"
+      <div :class='size'
            style="background-color:#87c787;">
         <h2>3</h2>
       </div>
 
-      <div class="column"
-           style="background-color:#c38ad5;">
+      <div :class='size'
+           style="background-color:#c38ad5;"
+      >
         <h2>4</h2>
       </div>
     </div>
@@ -38,13 +42,20 @@
 </template>
 
 <script>
+
+
+
 export default {
-  name: 'vue-component',
-  data: () => ({
-    sm: '10%',
-    md: '50%',
-    lg: '100%'
-  }),
+  name: 'flex-layout',
+  props: {
+    size: String,
+  },
+  // props:['size'],
+  // data: () => ({
+  //   sm: '10%',
+  //   md: '70%',
+  //   lg: '100%'
+  // }),
 }
 </script>
 <style>
@@ -60,21 +71,21 @@ export default {
   padding: 20px;
   flex: 25%;
 }
-/*.column-sm{*/
-/*  text-align: center;*/
-/*  flex: 10%;*/
-/*  padding: 20px;*/
-/*}*/
-/*.column-md{*/
-/*  text-align: center;*/
-/*  flex: 50%;*/
-/*  padding: 20px;*/
-/*}*/
-/*.column-lg{*/
-/*  text-align: center;*/
-/*  flex: 100%;*/
-/*  padding: 20px;*/
-/*}*/
+.sm{
+  text-align: center;
+  flex: 10%;
+  padding: 20px;
+}
+.md{
+  text-align: center;
+  flex: 50%;
+  padding: 20px;
+}
+.lg{
+  text-align: center;
+  flex: 100%;
+  padding: 20px;
+}
 
 @media screen and (max-width: 992px) {
   .column {
