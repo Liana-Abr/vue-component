@@ -6,11 +6,11 @@
         <li class="nav-item" v-for="link in links" :key="link">
           <a href="#" class="nav-link">{{ link }}</a>
         </li>
-
+        <button class="nav-btn">Sign In</button>
       </ul>
 
       <div class="hamburger" @click="menuOpen = !menuOpen">
-        <i class="bi bi-list"></i>
+        <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
 
@@ -19,6 +19,7 @@
       <li class="nav-item" v-for="link in links" :key="link">
         <a href="#">{{ link }}</a>
       </li>
+      <button class="nav-btn">Sign In</button>
 
     </ul>
   </div>
@@ -45,13 +46,17 @@ export default {
   box-sizing: border-box;
 }
 header{
-  background-color: #4040a4;
+  background-color: #f8f7f7;
+}
+.nav-logo{
+  font-weight: bold;
+  color: #0084ff;
 }
 li{
   list-style: none;
 }
 a{
-  color: white;
+  color: #919191;
   text-decoration: none;
 }
 .navbar{
@@ -73,14 +78,28 @@ a{
 }
 .nav-link{
   transition: 0.5s ease;
+  font-weight: 500;
 }
 .nav-link:hover{
   color: #0084ff;
 }
+
+.nav-btn{
+  cursor: pointer;
+  padding: 10px;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 5px;
+}
+.nav-btn:hover{
+  background-color: #0468c5;
+  transition: 0.5s ease;
+}
+
 .hamburger{
   display: none;
   cursor: pointer;
-  color: white;
+  color: #0084ff;
   font-size: 30px;
 
 }
@@ -93,9 +112,12 @@ a{
     display: block;
   }
 
+  .nav-btn{
+    font-size: 25px;
+  }
   .dropdown {
     height: 0;
-    background-color: #232369;
+    background-color: #e7e7e7;
     transition: height 0.2s ease;
     display: flex;
     align-items: center;
@@ -117,6 +139,7 @@ a{
   }
 
   .nav-item {
+    font-weight: 500;
     text-transform: uppercase;
     text-align: center;
     padding: 35px;
