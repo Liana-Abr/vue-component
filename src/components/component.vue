@@ -1,5 +1,4 @@
 <template>
-  <h1>FlexLayout Component</h1>
 <!--  container=>row=>col-->
 <!-- "sm" => flex="10%"-->
 <!--   "md" => flex="70%"-->
@@ -7,12 +6,7 @@
 
   <div class="container">
     <div class="row">
-<!--      <div class="column"-->
-<!--           :style="{'flex': size + '%'}"-->
-<!--           style="background-color:#e74343;"-->
-<!--      >-->
-<!--        <h2>1</h2>-->
-<!--      </div>-->
+
       <div :class='size'
            style="background-color:#e74343;"
       >
@@ -50,12 +44,6 @@ export default {
   props: {
     size: String,
   },
-  // props:['size'],
-  // data: () => ({
-  //   sm: '10%',
-  //   md: '70%',
-  //   lg: '100%'
-  // }),
 }
 </script>
 <style>
@@ -66,11 +54,6 @@ export default {
 
 }
 
-.column {
-  text-align: center;
-  padding: 20px;
-  flex: 25%;
-}
 .sm{
   text-align: center;
   flex: 10%;
@@ -87,11 +70,6 @@ export default {
   padding: 20px;
 }
 
-@media screen and (max-width: 992px) {
-  .column {
-    flex: 50%;
-  }
-}
 
 @media screen and (max-width: 600px) {
   .row {
