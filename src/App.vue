@@ -1,19 +1,22 @@
 <template>
-  <h1>Flexlayout</h1>
-  <flex-layout
-      size="sm"
-  />
+  <h1>Components</h1>
+  <header-component/>
+<!--  <flex-layout-->
+<!--      size="sm"-->
+<!--  />-->
 
 </template>
 
 <script>
-import FlexLayout from "@/components/component";
+// import FlexLayout from "@/components/component";
+import HeaderComponent from "@/components/header";
 
 
 export default {
   name: 'App',
   components: {
-    FlexLayout,
+    HeaderComponent,
+    // FlexLayout,
 
   },
 
