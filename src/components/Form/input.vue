@@ -1,8 +1,8 @@
 <template>
 <!--  Виды: текст, почта, пароль-->
   <!--  Стили: outlined( с границами ),без пропса обычное поле, underlined( с нижнем подчеркиванием), shadow(с тенью)-->
-  <div class="container"  @mouseout="seeLabel=!seeLabel" @mouseenter="seeLabel = !seeLabel">
-      <label :style="{display: seeLabel ? 'flex' : 'none' }">{{label}}</label>
+  <div class="container">
+      <label>{{label}}</label>
       <input :class="variant" :style="{borderColor: color}" :type='type'>
   </div>
 </template>
@@ -10,16 +10,23 @@
 export default {
   name: "input-container",
   props:{
-    type: String,
-    label: String,
-    color: String,
-    variant: String
+    type: {
+      type: String,
+      required: true,
+    },
+    label: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      required: false,
+    },
+    variant: {
+      type: String,
+      required: true,
+    },
   },
-  data(){
-    return{
-      seeLabel: false
-    }
-  }
 }
 </script>
 <style scoped>
@@ -29,17 +36,13 @@ export default {
   display: flex;
   flex-direction: column;
 }
-button{
-  width: 200px;
-  background-color: #0084ff;
-}
 label{
   font-weight: bold;
   font-size: 15px;
-  display: none;
   transition: 0.7s ease;
 }
 input{
+  outline: none;
   width: 200px;
   padding: 2px;
   border-radius: 5px;
@@ -53,7 +56,7 @@ input{
   border-radius: 0;
 }
 .shadow{
-
+  box-shadow: 2px 2px 2px #8d8d8d;
 }
 
 </style>

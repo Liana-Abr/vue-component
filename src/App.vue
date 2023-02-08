@@ -3,14 +3,24 @@
 <!--  <header-component/>-->
   <checkbox-component label="Checkbox label" color="#39398c"/>
   <input-container
-      type="phone"
+      type="text"
       variant="outlined"
+      label="Введите имя"
+  />
+  <input-container
+      type="email"
+      variant="shadow"
       label="Введите почту"
   />
   <select-component
       :options="['1', '2', '3', '4']"
       :default="'1'"
       class="select"
+  />
+  <textarea-component
+      color="white"
+      variant="outlined"
+      label="Введите что-нибудь..."
   />
 <!--  <flex-layout-->
 <!--      size="sm"-->
@@ -24,11 +34,13 @@
 import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
+import TextareaComponent from "@/components/Form/textarea";
 
 
 export default {
   name: 'App',
   components: {
+    TextareaComponent,
     SelectComponent,
     InputContainer,
     CheckboxComponent,

@@ -12,8 +12,14 @@
 export default {
   name: "checkbox-component",
   props:{
-    label: String,
-    color: String
+    label: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      required: false,
+    },
   },
   data(){
     return{
