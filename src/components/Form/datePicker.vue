@@ -90,13 +90,4 @@ export default {
   margin: 0;
   outline: none;
 }
-
-/*.custom-select:after {*/
-/*  content: '\25bc';*/
-/*  color: #aaa;*/
-/*  font-size: 12px;*/
-/*  position: absolute;*/
-/*  right: 8px;*/
-/*  top: 10px;*/
-/*}*/
 </style>

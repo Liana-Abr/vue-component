@@ -2,6 +2,7 @@
   <div class="custom-select" :tabindex="tabindex" @blur="open = false">
     <div class="selected" :class="{ open: open }" @click="open = !open">
       {{ selected }}
+      <i class="fa-solid fa-chevron-down"></i>
     </div>
     <div class="items" :class="{ selectHide: !open }">
       <div
@@ -14,6 +15,7 @@
         "
       >
         {{ option }}
+
       </div>
     </div>
   </div>
@@ -65,12 +67,17 @@ export default {
 }
 
 .custom-select .selected {
+  display: flex;
+  justify-content: space-between;
   border-radius: 5px;
   border: 2px solid;
   color: black;
   padding-left: 1em;
   cursor: pointer;
   user-select: none;
+}
+.custom-select .selected i{
+  padding: 5px;
 }
 
 .custom-select .selected.open {
