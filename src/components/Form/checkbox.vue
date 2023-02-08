@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .checkbox{
   margin: 20px;
   width: 200px;
@@ -50,7 +50,6 @@ export default {
 .label{
   font-size: 20px;
   margin-left: 10px;
-  font-family: "Roboto", sans-serif;
 }
 
 
