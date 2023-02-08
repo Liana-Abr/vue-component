@@ -1,7 +1,10 @@
 <template>
   <h1>Components</h1>
 <!--  <header-component/>-->
-  <checkbox-component label="Checkbox label" color="#39398c"/>
+  <checkbox-component
+      label="Checkbox label"
+      color="#39398c"
+  />
   <input-container
       type="text"
       variant="outlined"
@@ -12,18 +15,34 @@
       variant="shadow"
       label="Введите почту"
   />
+  <input-container
+      type="password"
+      variant="underlined"
+      label="Введите пароль"
+  />
+
   <select-component
       :options="['1', '2', '3', '4']"
       :default="'1'"
-      class="select"
   />
   <textarea-component
       color="white"
       variant="outlined"
       label="Введите что-нибудь..."
   />
+  <textarea-component
+      color="white"
+      variant="underlined"
+      label="Введите что-нибудь..."
+  />
   <datepicker-component
       variant="shadow"
+  />
+  <datepicker-component
+      variant="underlined"
+  />
+  <datepicker-component
+      variant="outlined"
   />
 <!--  <flex-layout-->
 <!--      size="sm"-->

@@ -8,14 +8,9 @@
       <div
           v-for="(option, i) of options"
           :key="i"
-          @click="
-          selected = option;
-          open = false;
-          $emit('input', option);
-        "
+          @click="selected = option; open = false;"
       >
         {{ option }}
-
       </div>
     </div>
   </div>
@@ -49,9 +44,6 @@ export default {
               : null,
       open: false,
     };
-  },
-  mounted() {
-    this.$emit("input", this.selected);
   },
 };
 </script>

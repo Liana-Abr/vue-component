@@ -57,6 +57,4 @@ export default {
   font-size: 20px;
   margin-left: 10px;
 }
-
-
 </style>
