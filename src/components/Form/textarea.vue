@@ -3,7 +3,8 @@
   <label>{{label}}</label>
   <textarea
       :class="variant"
-  :style="{backgroundColor: color}">
+  :style="{backgroundColor: color}"
+  >
   </textarea>
 </div>
 </template>

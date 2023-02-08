@@ -22,7 +22,9 @@
       variant="outlined"
       label="Введите что-нибудь..."
   />
-  <datepicker-component/>
+  <datepicker-component
+      variant="shadow"
+  />
 <!--  <flex-layout-->
 <!--      size="sm"-->
 <!--  />-->

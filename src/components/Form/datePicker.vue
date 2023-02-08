@@ -1,6 +1,7 @@
 <template>
   <div class="date-picker">
-    <div class='custom-select'>
+<!--    Дата-->
+    <div class='custom-select' :class="variant">
       <select>
         <option
             v-for='i in numberOfDays'
@@ -10,15 +11,19 @@
         </option>
       </select>
     </div>
-
-    <div class="custom-select">
+    <!-- Месяц -->
+    <div class="custom-select" :class="variant">
       <select>
-        <option v-for="(month, i) in months" :key="month" :value="i">
+        <option
+            v-for="(month, i) in months"
+            :key="month"
+            :value="i">
           {{ month }}
         </option>
       </select>
     </div>
-    <div class="custom-select">
+    <!-- Год -->
+    <div class="custom-select" :class="variant">
       <select>
         <option
             v-for="i in numberOfYears"
@@ -57,8 +62,11 @@ export default {
       numberOfDays: 31
     }
   },
-  methods:{
-
+  props:{
+    variant:{
+      type: String,
+      required: true
+    }
   }
 }
 </script>
@@ -68,7 +76,6 @@ export default {
   margin: 20px;
 }
 .custom-select {
-  border: 2px solid;
   border-radius: 5px;
   float: left;
   margin-right: 10px;
@@ -89,5 +96,16 @@ export default {
   padding: 5px 30px 5px 10px;
   margin: 0;
   outline: none;
+}
+.outlined{
+  border: 2px solid;
+}
+.underlined{
+
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+.shadow{
+  box-shadow: 0px 0px 5px -1px #8d8d8d;
 }
 </style>
