@@ -22,6 +22,7 @@
       variant="outlined"
       label="Введите что-нибудь..."
   />
+  <datepicker-component/>
 <!--  <flex-layout-->
 <!--      size="sm"-->
 <!--  />-->
@@ -35,11 +36,13 @@ import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
+import DatepickerComponent from "@/components/Form/datePicker";
 
 
 export default {
   name: 'App',
   components: {
+    DatepickerComponent,
     TextareaComponent,
     SelectComponent,
     InputContainer,
