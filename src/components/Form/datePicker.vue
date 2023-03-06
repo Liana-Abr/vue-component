@@ -76,6 +76,7 @@ export default {
   margin: 20px;
 }
 .custom-select {
+  display: flex;
   border-radius: 5px;
   float: left;
   margin-right: 10px;

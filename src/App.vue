@@ -11,8 +11,13 @@
       label="Введите имя"
   />
   <input-container
-      type="email"
+      type="text"
       variant="shadow"
+      label="Введите имя"
+  />
+  <input-container
+      type="email"
+      variant="underlined"
       label="Введите почту"
   />
   <input-container
@@ -35,15 +40,16 @@
       variant="underlined"
       label="Введите что-нибудь..."
   />
-  <datepicker-component
-      variant="shadow"
-  />
-  <datepicker-component
-      variant="underlined"
-  />
-  <datepicker-component
-      variant="outlined"
-  />
+<!--  <datepicker-component-->
+<!--      variant="shadow"-->
+<!--  />-->
+<!--  <datepicker-component-->
+<!--      variant="underlined"-->
+<!--  />-->
+<!--  <datepicker-component-->
+<!--      variant="outlined"-->
+<!--  />-->
+<!--  <calendar-component/>-->
 <!--  <flex-layout-->
 <!--      size="sm"-->
 <!--  />-->
@@ -57,13 +63,15 @@ import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
-import DatepickerComponent from "@/components/Form/datePicker";
+// import DatepickerComponent from "@/components/Form/datePicker";
+// import CalendarComponent from "@/components/Form/calendar";
 
 
 export default {
   name: 'App',
   components: {
-    DatepickerComponent,
+    // CalendarComponent,
+    // DatepickerComponent,
     TextareaComponent,
     SelectComponent,
     InputContainer,
