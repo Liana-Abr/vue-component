@@ -40,6 +40,10 @@
       variant="underlined"
       label="Введите что-нибудь..."
   />
+<c-component/>
+<!--    <calendar-component/>-->
+<!--  <input-range/>-->
+
 <!--  <datepicker-component-->
 <!--      variant="shadow"-->
 <!--  />-->
@@ -49,7 +53,7 @@
 <!--  <datepicker-component-->
 <!--      variant="outlined"-->
 <!--  />-->
-<!--  <calendar-component/>-->
+
 <!--  <flex-layout-->
 <!--      size="sm"-->
 <!--  />-->
@@ -63,6 +67,8 @@ import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
+import CComponent from "@/components/Form/c";
+// import InputRange from "@/components/Form/range";
 // import DatepickerComponent from "@/components/Form/datePicker";
 // import CalendarComponent from "@/components/Form/calendar";
 
@@ -70,6 +76,8 @@ import TextareaComponent from "@/components/Form/textarea";
 export default {
   name: 'App',
   components: {
+    CComponent,
+    // InputRange,
     // CalendarComponent,
     // DatepickerComponent,
     TextareaComponent,
