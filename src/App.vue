@@ -1,6 +1,6 @@
 <template>
   <h1>Components</h1>
-<!--  <header-component/>-->
+  <header-component/>
   <checkbox-component
       label="Checkbox label"
       color="#39398c"
@@ -41,28 +41,12 @@
       label="Введите что-нибудь..."
   />
  <datepicker-component/>
-<!--    <calendar-component/>-->
-<!--  <input-range/>-->
-
-<!--  <datepicker-component-->
-<!--      variant="shadow"-->
-<!--  />-->
-<!--  <datepicker-component-->
-<!--      variant="underlined"-->
-<!--  />-->
-<!--  <datepicker-component-->
-<!--      variant="outlined"-->
-<!--  />-->
-
-<!--  <flex-layout-->
-<!--      size="sm"-->
-<!--  />-->
 
 </template>
 
 <script>
 // import FlexLayout from "@/components/component";
-// import HeaderComponent from "@/components/header";
+import HeaderComponent from "@/components/header";
 import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
@@ -79,7 +63,7 @@ export default {
     SelectComponent,
     InputContainer,
     CheckboxComponent,
-    // HeaderComponent,
+    HeaderComponent,
     // FlexLayout,
 
   },
