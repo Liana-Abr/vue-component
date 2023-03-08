@@ -40,7 +40,7 @@
       variant="underlined"
       label="Введите что-нибудь..."
   />
-<c-component/>
+ <datepicker-component/>
 <!--    <calendar-component/>-->
 <!--  <input-range/>-->
 
@@ -67,19 +67,14 @@ import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
-import CComponent from "@/components/Form/c";
-// import InputRange from "@/components/Form/range";
-// import DatepickerComponent from "@/components/Form/datePicker";
-// import CalendarComponent from "@/components/Form/calendar";
+import DatepickerComponent from "@/components/Form/datepicker";
+
 
 
 export default {
   name: 'App',
   components: {
-    CComponent,
-    // InputRange,
-    // CalendarComponent,
-    // DatepickerComponent,
+    DatepickerComponent,
     TextareaComponent,
     SelectComponent,
     InputContainer,

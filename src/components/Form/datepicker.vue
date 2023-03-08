@@ -65,7 +65,7 @@
 <script>
 
 export default {
-  name: "c-component",
+  name: "datepicker-component",
   data(){
     return{
       clickedWord: '',
