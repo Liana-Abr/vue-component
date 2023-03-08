@@ -1,6 +1,6 @@
 Vue Components
 - Адаптивная шапка сайта
-- Компоненты форм
+- Компоненты для формы
   - Input типов text, email, password
   - textarea
   - checkbox
