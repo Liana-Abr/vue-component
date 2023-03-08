@@ -1,7 +1,13 @@
 <template>
 <div class="container">
   <div class="select">
-    {{ new Date().getDate() }} /{{ currMonth+1 }} /{{currYear}}
+    <div v-if="clickedWord === ''">
+      {{ new Date().getDate() }} / {{ currMonth+1 }} /{{currYear}}
+    </div>
+    <div v-else>
+      {{clickedWord}}/{{ currMonth+1 }} /{{currYear}}
+    </div>
+
     <button @click.prevent='seeCalendar =!seeCalendar '>
       <i class="fa-regular fa-calendar"></i>
     </button>
@@ -39,13 +45,17 @@
         </li>
       </ul>
 
-        <div class="dates d-flex" @click="pickDate">
+        <div class="dates d-flex">
           <p  class="day" v-for="day in firstDayOfMonth" :key="day">{{}}</p>
-          <p :style="{color: todayDate(date) ? '#0084ff' : 'black' }" :class="date===todayDate() ? 'text-primary' : ''" class="day" v-for="date in lastDateOfMonth" :key="date">{{date}}</p>
+          <p :style="{color: todayDate(date) ? '#0084ff' : 'black' }"
+             :class="date===todayDate() ? 'text-primary' : ''" class="day"
+             v-for="date in lastDateOfMonth"
+             :key="date"
+             @click="clickedWord = date"
+          >
+            {{date}}
+          </p>
         </div>
-
-
-
     </div>
   </div>
 
@@ -58,6 +68,7 @@ export default {
   name: "c-component",
   data(){
     return{
+      clickedWord: '',
       seeCalendar: false,
       currYear: new Date().getFullYear(),
       currMonth: new Date().getMonth(),
@@ -113,9 +124,6 @@ export default {
       let toDay=new Date().toDateString()
       return calendarDate===toDay ? "text-primary" : ""
     },
-    pickDate(){
-      console.log("click")
-    }
   }
 }
 </script>
