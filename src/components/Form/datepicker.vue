@@ -17,22 +17,25 @@
 
   <div class="wrapper" :style="{display: seeCalendar ? 'block' : 'none' }">
     <header>
-      <button :class="{display: months[currMonth]==='Январь' ? 'icons-two-left': 'icons' }" :style="{display: months[currMonth]==='Январь' ? 'none': 'flex' }"  class="icons" @click="prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button :style="{display: months[currMonth]==='Январь' ? 'none': 'flex' }"
+              class="icons"
+              @click="prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
 
-      <p class="current-date">
+      <p class="current-date" :class="months[currMonth]=== 'Декабрь'? 'date-right' : 'current-date'">
         {{ months[currMonth] }} {{currYear}}
       </p>
       <div class="icons-years">
-          <button class="icons-up" @click="prevM">
+          <button class="icons-up"  :style="{left: months[currMonth]==='Декабрь' ? '40%' : '65%'}" @click="prevM">
             <i class="fa-solid fa-chevron-up"></i>
           </button>
-          <button class="icons-down" @click="nextM">
+          <button class="icons-down" :style="{left: months[currMonth]==='Декабрь' ? '40%' : '65%'}" @click="nextM">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
       </div>
 
-      <button :class="{display: months[currMonth]==='Декабрь' ? 'icons-two-right': 'icons' }"
-              :style="{display: months[currMonth]==='Декабрь' ? 'none': 'flex' }"
+      <button :style="{display: months[currMonth]==='Декабрь' ? 'none': 'flex' }"
               class="icons"
               @click="next">
         <i class="fa-solid fa-chevron-right"></i>
@@ -194,6 +197,9 @@ header .current-date{
   font-weight: 700;
   color: white;
 }
+header .date-right{
+  margin-left: 200px;
+}
 header .icons button{
   color: white;
   cursor: pointer;
@@ -215,7 +221,6 @@ header .icons button:hover{
 
 .icons-up{
   position: absolute;
-  left: 60%;
   top: 20%;
 }
 .icons-up:hover{
@@ -226,15 +231,7 @@ header .icons button:hover{
 
 .icons-down{
   position: absolute;
-  left: 60%;
-  top: 45%;
-}
-.icons-two-left{
-  left: 80%;
-  top: 45%;
-}
-.icons-two-right{
-  left: 50%;
+  left: 65%;
   top: 45%;
 }
 .icons-down:hover{
