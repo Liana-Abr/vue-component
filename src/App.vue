@@ -51,7 +51,7 @@ import CheckboxComponent from "@/components/Form/checkbox";
 import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
-import DatepickerComponent from "@/components/Form/datepicker";
+import DatepickerComponent from "@/components/datepicker";
 
 
 

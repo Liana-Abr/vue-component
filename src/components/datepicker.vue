@@ -48,10 +48,11 @@
         </li>
       </ul>
 
-        <div class="dates d-flex">
-          <p  class="day" v-for="day in firstDayOfMonth" :key="day">{{}}</p>
+        <div class="dates">
+          <p v-for="day in firstDayOfMonth" :key="day">{{}}</p>
           <p :style="{color: todayDate(date) ? '#0084ff' : 'black' }"
-             :class="date===todayDate() ? 'text-primary' : ''" class="day"
+             :class="date===todayDate() ? 'text-primary' : ''"
+             class="day"
              v-for="date in lastDateOfMonth"
              :key="date"
              @click="clickedWord = date"
@@ -267,7 +268,6 @@ header .icons button:hover{
 }
 .calendar .day:hover{
   background: rgba(206, 206, 206, 0.36);
-
 }
 
 
