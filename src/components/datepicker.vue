@@ -249,7 +249,7 @@ header .icons button:hover{
 }
 
 .calendar .weeks li{
-  margin: 18.5px;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   font-weight: 500;
