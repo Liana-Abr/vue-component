@@ -5,22 +5,22 @@
       label="Checkbox label"
       color="#39398c"
   />
-  <input-container
+  <input-component
       type="text"
       variant="outlined"
       label="Введите имя"
   />
-  <input-container
+  <input-component
       type="text"
       variant="shadow"
       label="Введите имя"
   />
-  <input-container
+  <input-component
       type="email"
       variant="underlined"
       label="Введите почту"
   />
-  <input-container
+  <input-component
       type="password"
       variant="underlined"
       label="Введите пароль"
@@ -48,20 +48,20 @@
 // import FlexLayout from "@/components/component";
 import HeaderComponent from "@/components/header";
 import CheckboxComponent from "@/components/Form/checkbox";
-import InputContainer from "@/components/Form/input";
 import SelectComponent from "@/components/Form/select";
 import TextareaComponent from "@/components/Form/textarea";
 import DatepickerComponent from "@/components/datepicker";
+import InputComponent from "@/components/Form/input";
 
 
 
 export default {
   name: 'App',
   components: {
+    InputComponent,
     DatepickerComponent,
     TextareaComponent,
     SelectComponent,
-    InputContainer,
     CheckboxComponent,
     HeaderComponent,
     // FlexLayout,

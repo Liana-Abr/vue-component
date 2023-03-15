@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
-  name: "input-container",
+  name: "input-component",
   props:{
     type: {
       type: String,
